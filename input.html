@@ -1,0 +1,37 @@
+<!-- input.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Input</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input type="text" id="userInput" placeholder="Enter password">
+  <button id="sendBtn">Submit</button>
+  <div id="response" class="response"></div>
+
+  <script>
+    const correctPassword = "sorry";
+
+    document.getElementById("sendBtn").addEventListener("click", checkPassword);
+    document.getElementById("userInput").addEventListener("keypress", function (e) {
+      if (e.key === "Enter") checkPassword();
+    });
+
+    function checkPassword() {
+      const input = document.getElementById("userInput").value.trim().toLowerCase();
+      const response = document.getElementById("response");
+
+      if (input === correctPassword) {
+        response.textContent = "Access granted...";
+        setTimeout(() => {
+          window.location.href = "success.html";
+        }, 1000);
+      } else {
+        response.textContent = "Access denied.";
+      }
+    }
+  </script>
+</body>
+</html>
