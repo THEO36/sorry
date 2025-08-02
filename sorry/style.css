@@ -1,0 +1,86 @@
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #0a0a0a;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background: #121212;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffff33;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background: #1f1f1f;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+
+.response {
+  color: #00ff99;
+  font-size: 24px;
+  min-height: 30px;
+  line-height: 30px;
+  transition: opacity 2s;
+  word-break: break-word;
+  margin-top: 20px; /* ✅ Add spacing */
+}
+
